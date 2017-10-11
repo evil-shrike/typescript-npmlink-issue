@@ -1,0 +1,22 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"module": "amd",
+		"target": "es3",
+		"sourceMap": true,
+		"noEmitHelpers": true,
+		"experimentalDecorators": true,
+		"baseUrl": ".", // This must be specified if "paths" is.
+		"paths": {
+			// map runtime paths to compile-time paths
+			"lib/*": [ "src/lib/*" ],
+			"modules/*": [ "src/modules/*" ],
+			"vendor/*": [ "src/vendor/*" ]
+		},
+		"typeRoots" : ["src/typings"]
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/.*.ts" // TS ignores file names starting with dot by default
+	]
+}

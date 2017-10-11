@@ -1,0 +1,20 @@
+{
+    "extends": "./node_modules/tstest-lib/tsconfig",
+    "include": [
+        "src/**/*.ts",
+        "src/**/.*.ts",
+        "node_modules/tstest-lib/src/**/*.ts",
+        "node_modules/tstest-lib/src/**/.*.ts"
+    ],
+    "compilerOptions": {
+      "baseUrl": ".",
+      "typeRoots" : ["node_modules/tstest-lib/src/typings"],
+      "paths": {
+        // map runtime paths to compile-time paths
+        //"*":     [ "node_modules/@croc/webclient/src/typings/*", "*"],
+        "lib/*": [ "node_modules/tstest-lib/src/lib/*" ],
+        "modules/*": [ "node_modules/tstest-lib/src/modules/*" ],
+        "vendor/*": [ "node_modules/tstest-lib/src/vendor/*" ]
+      }
+    }
+}
